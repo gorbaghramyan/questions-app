@@ -21,6 +21,10 @@ export class ThanksComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    if (!this.questionsCount) {
+      this.router.navigate(['/']);
+      return;
+    }
     this.scoreService.submitScore(this.correctAnswers);
   }
 }
