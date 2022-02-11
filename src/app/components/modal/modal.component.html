@@ -1,0 +1,7 @@
+<h1 mat-dialog-title>Best Scores</h1>
+<div mat-dialog-content>
+    <div *ngIf="!scores.length">Empty</div>
+    <div *ngFor="let score of scores; let index = index">
+        {{index+1}} - {{score}}
+    </div>
+</div>

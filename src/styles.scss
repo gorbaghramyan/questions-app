@@ -1,0 +1,41 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;700&display=swap');
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #EFF2F7;
+    min-width: 320px;
+    max-width: 1920px;
+}
+
+h1 {
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 150%;
+    margin: 134px 0 0;
+    color: #3A7859;
+}
+
+.green-button {
+    font-family: 'Barlow';
+    background: #3A7859;
+    color: white;
+    border-radius: 18px;
+    margin: 10vh auto;
+    font-size: 18px;
+    padding: 10px;
+    width: 150px;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #2D6A4C;
+        color: white;
+    }
+    &:disabled {
+        color: #C4C4C4;
+        background: #F6F7F8;
+    }
+}

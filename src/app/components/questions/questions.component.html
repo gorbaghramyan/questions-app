@@ -1,0 +1,13 @@
+<ng-template [ngIf]="questions.length" [ngIfElse]="loading">
+    <h1>Questions {{index > 9 ? index : '0' + index}}</h1>
+    <div class="question-wrapper">
+        <span class="difficulty" [ngClass]="curQuestion.difficulty">{{curQuestion.difficulty}}</span>
+        <p>{{curQuestion.question}}</p>
+    </div>
+    <div class="answers">
+        <button *ngFor="let answer of answers" (click)="onAnswer(answer.isCorrect)">{{answer.answer}}</button>
+    </div>
+</ng-template>
+<ng-template #loading>
+    <app-loader></app-loader>
+</ng-template>
